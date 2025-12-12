@@ -28,7 +28,7 @@ namespace germsn_y_chino_proyecto_2
 			this.panelcuadrado.Visible=false;
 			this.panelRectangu.Visible=false;
 			this.panelTriangulo.Visible=false;
-			
+			this.panel1.Visible=false;
 			
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
@@ -82,8 +82,21 @@ namespace germsn_y_chino_proyecto_2
 		
 		void BtnCalFibonnaciClick(object sender, EventArgs e)
 		{
-			
-			            
+			int num;
+			if (!int.TryParse(txtNumFibonnici.Text,out num) || num <= 0)
+			{
+				MessageBox.Show("Ingresa un numero entero mayor a 0");
+				return;
+			}
+			int a=0,b=1,c;
+			string serie="";
+			for (int i=1; i<=num; i++)
+			{
+				serie += a+"";
+				c=a+b;
+				b=c;
+			}
+			lblResultFibonnaci.Text=" Resultado " + serie;
 		}
 		void CuadradoToolStripMenuItemClick(object sender, EventArgs e)
 		{
@@ -160,6 +173,24 @@ namespace germsn_y_chino_proyecto_2
 		{
 			Empleados emple=new Empleados();
 			emple.Show();
+		}
+		void Panel2Paint(object sender, PaintEventArgs e)
+		{
+	
+		}
+		void PerimetroToolStripMenuItemClick(object sender, EventArgs e)
+		{
+	
+		}
+		void CyuadradoToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			this.panel1.Visible=true;
+		}
+		void BtnLimpiarfibonnaciClick(object sender, EventArgs e)
+		{
+			txtNumFibonnici.Text="";
+			lblResultFibonnaci.Text="";
+			
 		}
 	}
 }
