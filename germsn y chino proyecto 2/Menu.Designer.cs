@@ -48,6 +48,8 @@ namespace germsn_y_chino_proyecto_2
 			this.rectanguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.trianguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.perimetroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.cyuadradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.trToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.volumenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.conversacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.boletaDeLaCalificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,12 +98,16 @@ namespace germsn_y_chino_proyecto_2
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.button1 = new System.Windows.Forms.Button();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
 			this.menuStrip1.SuspendLayout();
 			this.panelFactorial.SuspendLayout();
 			this.panelfibonnaci.SuspendLayout();
 			this.panelRectangu.SuspendLayout();
 			this.panelTriangulo.SuspendLayout();
 			this.panelcuadrado.SuspendLayout();
+			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -203,9 +209,26 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// perimetroToolStripMenuItem
 			// 
+			this.perimetroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.cyuadradoToolStripMenuItem,
+			this.trToolStripMenuItem});
 			this.perimetroToolStripMenuItem.Name = "perimetroToolStripMenuItem";
-			this.perimetroToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-			this.perimetroToolStripMenuItem.Text = "Perimetro";
+			this.perimetroToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+			this.perimetroToolStripMenuItem.Text = "perimetro";
+			this.perimetroToolStripMenuItem.Click += new System.EventHandler(this.PerimetroToolStripMenuItemClick);
+			// 
+			// cyuadradoToolStripMenuItem
+			// 
+			this.cyuadradoToolStripMenuItem.Name = "cyuadradoToolStripMenuItem";
+			this.cyuadradoToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+			this.cyuadradoToolStripMenuItem.Text = "cyuadrado";
+			this.cyuadradoToolStripMenuItem.Click += new System.EventHandler(this.CyuadradoToolStripMenuItemClick);
+			// 
+			// trToolStripMenuItem
+			// 
+			this.trToolStripMenuItem.Name = "trToolStripMenuItem";
+			this.trToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+			this.trToolStripMenuItem.Text = "tr";
 			// 
 			// volumenToolStripMenuItem
 			// 
@@ -266,6 +289,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// panelFactorial
 			// 
+			this.panelFactorial.BackColor = System.Drawing.Color.Gray;
 			this.panelFactorial.Controls.Add(this.btnLimpiarFACTORIAL);
 			this.panelFactorial.Controls.Add(this.lblResult);
 			this.panelFactorial.Controls.Add(this.btnCalcularFactorial);
@@ -328,6 +352,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// panelfibonnaci
 			// 
+			this.panelfibonnaci.BackColor = System.Drawing.Color.Gray;
 			this.panelfibonnaci.Controls.Add(this.lblResultFibonnaci);
 			this.panelfibonnaci.Controls.Add(this.btnLimpiarfibonnaci);
 			this.panelfibonnaci.Controls.Add(this.btnCalFibonnaci);
@@ -341,6 +366,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// lblResultFibonnaci
 			// 
+			this.lblResultFibonnaci.Font = new System.Drawing.Font("NSimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblResultFibonnaci.Location = new System.Drawing.Point(76, 75);
 			this.lblResultFibonnaci.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblResultFibonnaci.Name = "lblResultFibonnaci";
@@ -356,6 +382,7 @@ namespace germsn_y_chino_proyecto_2
 			this.btnLimpiarfibonnaci.TabIndex = 3;
 			this.btnLimpiarfibonnaci.Text = "Limpiar";
 			this.btnLimpiarfibonnaci.UseVisualStyleBackColor = true;
+			this.btnLimpiarfibonnaci.Click += new System.EventHandler(this.BtnLimpiarfibonnaciClick);
 			// 
 			// btnCalFibonnaci
 			// 
@@ -388,6 +415,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// panelRectangu
 			// 
+			this.panelRectangu.BackColor = System.Drawing.Color.Gray;
 			this.panelRectangu.Controls.Add(this.label9);
 			this.panelRectangu.Controls.Add(this.txtHalturaRec);
 			this.panelRectangu.Controls.Add(this.label3);
@@ -430,6 +458,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// lblresultRec
 			// 
+			this.lblresultRec.Font = new System.Drawing.Font("NSimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblresultRec.Location = new System.Drawing.Point(40, 124);
 			this.lblresultRec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblresultRec.Name = "lblresultRec";
@@ -477,6 +506,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// panelTriangulo
 			// 
+			this.panelTriangulo.BackColor = System.Drawing.Color.Gray;
 			this.panelTriangulo.Controls.Add(this.label10);
 			this.panelTriangulo.Controls.Add(this.lblresultadotriangulo);
 			this.panelTriangulo.Controls.Add(this.txtTriangulob);
@@ -502,6 +532,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// lblresultadotriangulo
 			// 
+			this.lblresultadotriangulo.Font = new System.Drawing.Font("NSimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblresultadotriangulo.Location = new System.Drawing.Point(60, 103);
 			this.lblresultadotriangulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblresultadotriangulo.Name = "lblresultadotriangulo";
@@ -566,6 +597,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// panelcuadrado
 			// 
+			this.panelcuadrado.BackColor = System.Drawing.Color.Gray;
 			this.panelcuadrado.Controls.Add(this.label8);
 			this.panelcuadrado.Controls.Add(this.btnlimpiarcuadrado);
 			this.panelcuadrado.Controls.Add(this.btncalcuadrado);
@@ -611,6 +643,7 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// lblResultadocuadra
 			// 
+			this.lblResultadocuadra.Font = new System.Drawing.Font("NSimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblResultadocuadra.Location = new System.Drawing.Point(60, 79);
 			this.lblResultadocuadra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblResultadocuadra.Name = "lblResultadocuadra";
@@ -636,6 +669,10 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// panel1
 			// 
+			this.panel1.BackColor = System.Drawing.Color.Gray;
+			this.panel1.Controls.Add(this.checkedListBox1);
+			this.panel1.Controls.Add(this.comboBox1);
+			this.panel1.Controls.Add(this.button1);
 			this.panel1.Location = new System.Drawing.Point(728, 35);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(323, 153);
@@ -643,22 +680,51 @@ namespace germsn_y_chino_proyecto_2
 			// 
 			// panel2
 			// 
+			this.panel2.BackColor = System.Drawing.Color.Gray;
 			this.panel2.Location = new System.Drawing.Point(729, 196);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(322, 205);
 			this.panel2.TabIndex = 9;
+			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2Paint);
 			// 
 			// panel3
 			// 
+			this.panel3.BackColor = System.Drawing.Color.Gray;
 			this.panel3.Location = new System.Drawing.Point(1057, 31);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(377, 244);
 			this.panel3.TabIndex = 10;
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(138, 68);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 0;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(67, 81);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(121, 24);
+			this.comboBox1.TabIndex = 1;
+			// 
+			// checkedListBox1
+			// 
+			this.checkedListBox1.FormattingEnabled = true;
+			this.checkedListBox1.Location = new System.Drawing.Point(41, 38);
+			this.checkedListBox1.Name = "checkedListBox1";
+			this.checkedListBox1.Size = new System.Drawing.Size(120, 89);
+			this.checkedListBox1.TabIndex = 2;
+			// 
 			// Menu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Teal;
 			this.ClientSize = new System.Drawing.Size(1761, 762);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel2);
@@ -685,6 +751,7 @@ namespace germsn_y_chino_proyecto_2
 			this.panelTriangulo.PerformLayout();
 			this.panelcuadrado.ResumeLayout(false);
 			this.panelcuadrado.PerformLayout();
+			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -749,5 +816,10 @@ namespace germsn_y_chino_proyecto_2
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Panel panel3;
+		private System.Windows.Forms.ToolStripMenuItem cyuadradoToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem trToolStripMenuItem;
+		private System.Windows.Forms.CheckedListBox checkedListBox1;
+		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.Button button1;
 	}
 }
