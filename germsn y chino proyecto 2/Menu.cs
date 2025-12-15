@@ -192,5 +192,13 @@ namespace germsn_y_chino_proyecto_2
 			lblResultFibonnaci.Text="";
 			
 		}
+		void BtnCalcularClick(object sender, EventArgs e)
+		{
+	       double radio = double.Parse(txtRadio.Text);
+    double perimetro = 2 * Math.PI * radio;
+
+    lblResultado.Text = perimetro.ToString("0.00");
+
+		}
 	}
 }
