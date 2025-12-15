@@ -28,7 +28,7 @@ namespace germsn_y_chino_proyecto_2
 			this.panelcuadrado.Visible=false;
 			this.panelRectangu.Visible=false;
 			this.panelTriangulo.Visible=false;
-			this.panel1.Visible=false;
+			this.PanelPerimetro.Visible=false;
 			
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
@@ -174,23 +174,37 @@ namespace germsn_y_chino_proyecto_2
 			Empleados emple=new Empleados();
 			emple.Show();
 		}
-		void Panel2Paint(object sender, PaintEventArgs e)
-		{
-	
-		}
-		void PerimetroToolStripMenuItemClick(object sender, EventArgs e)
-		{
-	
-		}
+		
 		void CyuadradoToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			this.panel1.Visible=true;
+			this.PanelPerimetro.Visible=true;
 		}
 		void BtnLimpiarfibonnaciClick(object sender, EventArgs e)
 		{
 			txtNumFibonnici.Text="";
 			lblResultFibonnaci.Text="";
 			
+		}
+		
+		void BtnCalPerimetroClick(object sender, EventArgs e)
+		{
+			double BM, bm, L;
+			
+			if(double.TryParse(txtBaseMayor.Text, out BM) &&
+				double.TryParse(txtbasemenor.Text, out bm) &&
+				double.TryParse(txtladostrapecio.Text, out L))
+			{
+				double PERIMETRO = BM + bm + L;
+				lblResultPerimetroTrapecio.Text="El perimetro es: " + PERIMETRO;
+			}				
+		}
+		
+		void BtnLimPeriClick(object sender, EventArgs e)
+		{
+			txtBaseMayor.Text="";
+			txtbasemenor.Text="";
+			txtladostrapecio.Text="";
+			lblResultPerimetroTrapecio.Text="";			
 		}
 	}
 }
