@@ -218,7 +218,8 @@ namespace germsn_y_chino_proyecto_2
 			this.perimetroToolStripMenuItem.Name = "perimetroToolStripMenuItem";
 			this.perimetroToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
 			this.perimetroToolStripMenuItem.Text = "Trapecio";
-			this.perimetroToolStripMenuItem.Click += new System.EventHandler(this.PerimetroToolStripMenuItemClick);
+
+			
 			// 
 			// cyuadradoToolStripMenuItem
 			// 
