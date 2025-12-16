@@ -47,9 +47,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Boleta.cs" />
-    <Compile Include="Boleta.Designer.cs">
-      <DependentUpon>Boleta.cs</DependentUpon>
+    <Compile Include="BoletaDeCalifi.cs" />
+    <Compile Include="BoletaDeCalifi.Designer.cs">
+      <DependentUpon>BoletaDeCalifi.cs</DependentUpon>
     </Compile>
     <Compile Include="Empleados.cs" />
     <Compile Include="Empleados.Designer.cs">
@@ -71,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BoletaDeCalifi.resx">
+      <DependentUpon>BoletaDeCalifi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
