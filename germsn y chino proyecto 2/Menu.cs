@@ -161,7 +161,7 @@ namespace germsn_y_chino_proyecto_2
 		}
 		void AbrirToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			Boleta Boleta=new Boleta();
+			BoletaDeCalifi Boleta=new BoletaDeCalifi();
 			Boleta.Show();
 		}
 		void AbrirToolStripMenuItem1Click(object sender, EventArgs e)
